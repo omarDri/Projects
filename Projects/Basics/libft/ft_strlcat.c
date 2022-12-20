@@ -10,27 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ft_strlen.c>
+#include <stdio.h>
 
-unsigned int    ft_strlcpy(char *dest, const char *src, unsigned int sz)
+    size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-    unsigned int    i;
-    int srcl;
-    int dl;
-    int size;
+	size_t	i;
+	size_t	ret;
 
-    size = sz - 1;
-    dl = ft_strlen(dest) + 1;
-    i = 0;
-    if (size == 0)
-        return(srcl);
-    while (i < size - 1)
-    {
-        dest[i + dl] = src[i];
-        if (i == size)
-            dest[i] = '\0';
-        i++;
-    }
-    dl = ft_strlen(dest);
-    return (dl + i);
+	i = 0;
+	while (*dst && i < dstsize)
+	{
+		++dst;
+		++i;
+	}
+	ret = ft_strlcpy(dst, src, dstsize - i);
+	return (ret + i);
 }
+

@@ -1,24 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aortmann <aortmann@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/12 14:19:39 by aortmann          #+#    #+#             */
-/*   Updated: 2022/12/12 14:19:39 by aortmann         ###   ########.fr       */
+/*   Created: 2022/12/19 17:42:20 by aortmann          #+#    #+#             */
+/*   Updated: 2022/12/19 17:42:20 by aortmann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stddef.h>
-
-size_t ft_strlen(const char *str)
+char    **ft_split(char const *s, char c)
 {
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+    while
 }
