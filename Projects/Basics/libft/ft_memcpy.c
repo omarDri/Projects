@@ -10,24 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ft_strlen.c"
+#include "libft.h"
 
-void    *ft_memcpy(void *dest, void * src, unsigned int n)
+void    ft_memcpy(void *dest, const void *src, unsigned int n)
 {
-    unsigned int i;
-    char *dest1;
-    char *src1;
-    unsigned int    sl;
+    unsigned int    i;
 
-    src1 = (unsigned char *)src;
-    dest1 = (unsigned char *)dest;
-    
     i = 0;
-    sl = ft_strlen(src);
-    while (i < sl && i < n)
+    while (i < n)
     {
-        dest1[i] = src1[i];
+        *((char*) dest + i) = *((char*) src + i);
         i++;
     }
-    return(dest1);
+    return (dest);
 }

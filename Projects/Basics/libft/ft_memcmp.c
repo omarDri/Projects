@@ -32,15 +32,3 @@ int	ft_memcmp(const void *str1, const void *str2, unsigned int n)
 	return(0);
 }
 
-int main(void)
-{
-    unsigned char str[] = "helBo";
-    unsigned char str2[] = "helAA";
-    int ret;
-    int n;
-
-    n = 5;
-    ret = ft_memcmp(str, str2, n);
-    printf("%d", ret);
-    return(0);
-}

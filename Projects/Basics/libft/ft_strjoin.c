@@ -11,12 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include "ft_strlen.c"
-#include "ft_strlcpy.c"
-#include "ft_strlcat.c"
-
 
 char    *ft_strjoin(char const *s1, char const *s2)
 {

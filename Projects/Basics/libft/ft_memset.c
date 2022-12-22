@@ -10,17 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-void    *ft_memset(void *s, int c, unsigned int n)
-{
-    unsigned int    i;
-    unsigned char    *str;
+#include "libft.h"
 
-    str = (unsigned char *)s;
-    i = 0;
-    while (i < n)
-    {
-        str[i] = c;
-        i++;
-    }
-    return(s);
+void
+	*ft_memset(void *b, int c, size_t len)
+{
+	size_t			i;
+
+	if (!b)
+		return (NULL);
+	i = 0;
+	while (i < len)
+	{
+		*(unsigned char*)(b + i) = (unsigned char)c;
+		i++;
+	}
+	return (b);
 }

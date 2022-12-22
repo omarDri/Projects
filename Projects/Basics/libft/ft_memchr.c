@@ -34,17 +34,3 @@ void    *ft_memchr(const void *str, int c, unsigned int n)
 	return(NULL);
 
 }
-
-int main(void)
-{
-	unsigned char str[] = "hello";
-	unsigned char ch;
-	unsigned char *ret;
-	int i;
-
-	ch = 'l';
-	i = 12;
-	ret = ft_memchr(str, ch, i);
-	printf("%s", ret);
-	return(0);
-}

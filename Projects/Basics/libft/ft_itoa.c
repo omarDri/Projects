@@ -45,14 +45,6 @@ char  *ft_itoa(int n)
             ret[--c] = dgt[n % 10];
         else
             ret[--c] = dgt[n % 10 * -1];
-        n /= 10;
+        n = n / 10;
         }
-}
-
-int main (void)
-{
-    int i;
-
-    i = 0;
-    ft_itoa(i);
 }

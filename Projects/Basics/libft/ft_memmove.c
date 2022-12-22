@@ -10,36 +10,32 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"ft_strlen.c"
-#include<stdio.h>
+#include "libft.h"
 
-
-void    *ft_memmove(void *s, int c, unsigned int n)
+void
+	*ft_memmove(void *dst, const void *src, size_t len)
 {
-    unsigned int    i;
-    unsigned char    *str;
+	int	i;
 
-    str = (unsigned char *)s;
-    i = 0;
-    while (i < n)
-    {
-        str[i] = c;
-        i++;
-    }
-    return(s);
+	if (!dst || !src)
+		return (NULL);
+	if (dst > src)
+	{
+		i = (int)len - 1;
+		while (i >= 0)
+		{
+			*(char*)(dst + i) = *(char*)(src + i);
+			i--;
+		}
+	}
+	else
+	{
+		i = 0;
+		while (i < (int)len)
+		{
+			*(char*)(dst + i) = *(char*)(src + i);
+			i++;
+		}
+	}
+	return (dst);
 }
-
-int    main(void)
-{
-    unsigned char c;
-    unsigned char    str[]  = "ALLESKLAR";
-    int    size;
-    char *ret;
-
-    c = 'a';
-    size = 2;
-    ret = ft_memset(str, c, size);
-    printf("%s", ret);
-    return(0);
-}
-	

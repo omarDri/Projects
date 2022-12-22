@@ -26,4 +26,3 @@
 	ret = ft_strlcpy(dst, src, dstsize - i);
 	return (ret + i);
 }
-

@@ -38,9 +38,9 @@ char	**ft_split(const char *s, char c)
 	int	i;
 	int	len;
 
+	i = 0;
 	if (!s)
 		return (0);
-	i = 0;
 	ret = malloc(sizeof(char *) * (ft_len(s, c) + 1));
 	if (!ret)
 		return (0);

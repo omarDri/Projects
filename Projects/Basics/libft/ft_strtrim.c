@@ -10,11 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include <stddef.h>
 #include "libft.h"
-#include "ft_strlen.c"
-#include "ft_substr.c"
 
 static int	ft_isset(char c, const char *set)
 {
@@ -30,10 +26,10 @@ char	*ft_strtrim(const char *s1, const char *set)
 	char	*start;
 	char	*end;
 
-	if (!s1 || !set)
-		return (0);
 	start = (char *)s1;
 	end = start + ft_strlen(s1);
+	if (!s1 || !set)
+		return (0);
 	while (*start && ft_isset(*start, set))
 		++start;
 	while (start < end && ft_isset(*(end - 1), set))
