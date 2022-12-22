@@ -14,7 +14,7 @@
 #include<stdio.h>
 
 
-void *ft_memmove(void *s, int c, unsigned int n)
+void    *ft_memmove(void *s, int c, unsigned int n)
 {
     unsigned int    i;
     unsigned char    *str;

@@ -12,11 +12,10 @@
 
 #include "libft.h"
 
-void
-	*ft_calloc(unsigned int c, unsigned int size)
+void	*ft_calloc(unsigned int c, unsigned int size)
 {
 	void	*ptr;
-    char *a;
+    char	*a;
 
 	ptr = (void*)malloc(c * size);
     a = '\0';

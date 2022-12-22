@@ -11,9 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include "ft_strlen.c"
 
 char    *ft_strdup(const char *s1)
 {

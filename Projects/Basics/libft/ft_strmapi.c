@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aortmann <aortmann@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/13 21:17:16 by aortmann          #+#    #+#             */
-/*   Updated: 2022/12/13 21:17:16 by aortmann         ###   ########.fr       */
+/*   Created: 2022/12/21 05:12:25 by aortmann          #+#    #+#             */
+/*   Updated: 2022/12/21 05:12:25 by aortmann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    *ft_memset(void *s, int c, unsigned int n)
+char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    unsigned int    i;
-    unsigned char    *str;
+    int i;
+    char    *ret;
 
-    str = (unsigned char *)s;
+    if (!s)
+        return (0);
     i = 0;
-    while (i < n)
+    ret = (char *)malloc(sizeof(char) * (ft_strlen(s)) + 1);
+    if (ret == 0)
+        return (0);
+    while (s[i] != '\0')
     {
-        str[i] = c;
+        ret[i] = f(i, s[i]);
         i++;
     }
-    return(s);
+    ret[i] = '\0';
+    return (ret);
 }
