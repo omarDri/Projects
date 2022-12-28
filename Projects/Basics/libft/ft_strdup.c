@@ -12,15 +12,15 @@
 
 #include "libft.h"
 
-char    *ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
-	char	*str;
+	char			*str;
 	unsigned int	i;
-    unsigned int    c;
+	unsigned int	c;
 
-    c = ft_strlen(s1) + 1;
-    i = 0;
-	str = (char*)malloc(sizeof(*s1) * c);
+	c = ft_strlen(s1) + 1;
+	i = 0;
+	str = (char *)malloc(sizeof(*s1) * c);
 	if (!s1)
 		return (NULL);
 	if (!str)
@@ -32,15 +32,4 @@ char    *ft_strdup(const char *s1)
 	}
 	str[i] = 0;
 	return (str);
-}
-
-int main(void)
-{
-    char  *str;
-    char    *ret;
-
-    str = "Hello";
-    ret = ft_strdup(str);
-
-    printf("the pointer is %s", ret);
 }

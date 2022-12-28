@@ -10,27 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include "libft.h"
 
-char    *ft_tolower(char *src)
+int	ft_tolower(int c)
 {
-    int    i;
-
-    i = 0;
-    while (src[i] != '\0')
-    {
-        if (src[i] >= 'A' && src[i] <= 'Z')
-            src[i] = src[i] + 32;
-        i++;
-    }
-    return (src);
-}
-
-int main(void)
-{
-    char src[] = "HELLOWORLD12";
-
-    ft_tolower(src);
-    printf("%s", src);
-    return(0);
+	if (c >= 'A' && c <= 'Z')
+		c += 32;
+	return (c);
 }

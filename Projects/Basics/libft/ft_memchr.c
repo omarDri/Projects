@@ -10,27 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-#include"ft_strlen.c"
+#include"libft.h"
 
-void    *ft_memchr(const void *str, int c, unsigned int n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int i;
-	unsigned char   *h;
-    unsigned char   *ch;
-
-	i = 0;
-    h = (unsigned char *)str;
-	while (*h != '\0')
-	{	
-		if (*h == c)
-		    return(h);
-		*h++;
+	while (n--)
+	{
+		if (*(unsigned char *)s == (unsigned char)c)
+			return ((void *)s);
+		++s;
 	}
-	if (c == '\0')
-		return(h);
-	else
-		return (h);
-	return(NULL);
-
+	return (0);
 }

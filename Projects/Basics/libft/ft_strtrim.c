@@ -37,14 +37,3 @@ char	*ft_strtrim(const char *s1, const char *set)
 	ret = ft_substr(start, 0, end - start);
 	return (ret);
 }
-
-int main (void)
-{
-    char const  s[] = "HelloWorld";
-    char const  set[] = "HeloWr";
-    char    	*ret;
-
-    ret = ft_strtrim(s, set);
-	printf("the substring is %s", ret);
-
-}

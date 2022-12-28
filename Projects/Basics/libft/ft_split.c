@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static size_t	ft_len(const char *s, char c)
@@ -35,8 +34,8 @@ static size_t	ft_len(const char *s, char c)
 char	**ft_split(const char *s, char c)
 {
 	char	**ret;
-	int	i;
-	int	len;
+	int		i;
+	int		len;
 
 	i = 0;
 	if (!s)

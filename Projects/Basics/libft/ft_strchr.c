@@ -10,17 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strchr(char *str, int c)
-{
-	int i;
-	char *ret;
+#include "libft.h"
 
-	i = 0;
-	while (str[i] != '\0')
-	{	
-		if (str[i] == c)
-			return (&str[i]);
-		i++;
-	}
-	return('\0');
+char	*ft_strchr(const char *str, int c)
+{
+	while (*str != (unsigned char)c)
+		if (!*str++)
+			return (0);
+	return ((char *)str);
 }

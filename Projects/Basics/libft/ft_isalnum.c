@@ -10,16 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum(char *str)
-{
-    int c;
+#include "libft.h"
 
-    c = 0;
-    while (str[c] != '\0')
-    {
-        if (str[c] < 48 || str[c] > 57 && str[c] < 65 || str[c] > 90 && str[c] < 97 || str[c] > 122)  
-            return(0);
-        c++;
-    }
-    return(1);
+int	ft_isalnum(int c)
+{
+	return (ft_isdigit(c) || ft_isalpha(c));
 }

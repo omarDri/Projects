@@ -1,15 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aortmann <aortmann@student.42wolfsburg.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/22 23:58:06 by aortmann          #+#    #+#             */
+/*   Updated: 2022/12/22 23:58:06 by aortmann         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void    ft_putchar(char c)
+void	ft_putchar(char c)
 {
-    write(1, &c, 1);
+	write(1, &c, 1);
 }
 
-void    ft_is_negative(int nbr)
+void	ft_is_negative(int nbr)
 {
-    if (nbr < 0)
-        ft_putchar('N');
-    if (nbr >= 0)
-        ft_putchar("P");
+	if (nbr < 0)
+		ft_putchar('N');
+	if (nbr >= 0)
+		ft_putchar("P");
 }

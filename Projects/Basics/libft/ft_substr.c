@@ -11,48 +11,25 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
-char *ft_substr(char const *s, unsigned int start,size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int	i;
-	int	c;
-	char	*str;
+	char	*res;
+	char	*src;
+	size_t	reslen;
 
-	i = 0;
-	c = 0;
-	str = (char*)malloc(sizeof(*s) * (len + 1));
-	if (!str)
+	if (!s)
 		return (NULL);
-
-	while (s[i] != '\0')
-	{
-		if (i >= start && c < len)
-		{
-			str[c] = s[i];
-			c++;
-		}
-		i++;
-	}
-	str[c] = 0;
-	return (str);
+	if (ft_strlen(s) < (size_t)start)
+		return (ft_strdup(""));
+	src = (char *)s + start;
+	if (ft_strlen(src) < len)
+		reslen = ft_strlen(src) + 1;
+	else
+		reslen = len + 1;
+	res = malloc(reslen * sizeof(char));
+	if (!res)
+		return (NULL);
+	ft_strlcpy(res, src, reslen);
+	return (res);
 }
-
-// int main (void)
-// {
-//     char const  s[] = "     HelloWorld";
-//     unsigned int    i;
-//     size_t  len;
-//     char    *ret;
-
-//     len = 10;
-//     i = 3;
-//     ret = ft_substr(s, i, len);
-// 	printf("the substring is %s", ret);
-
-// }
-// Allocates (with malloc(3)) and returns a substring
-// from the string ’s’.
-// The substring begins at index ’start’ and is of
-// maximum size ’len

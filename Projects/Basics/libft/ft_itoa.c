@@ -10,41 +10,42 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int ft_dgtcount(int n)
+int	ft_numlen(int n, int base)
 {
-  int i;
-  
-  i = 0;
-  while (n != '\0')
-  {
-    n = n / 10;
-    i++;
-  }
-  return(i + 1);
+	int	count;
+
+	count = 0;
+	if (n <= 0)
+		++count;
+	while (n && ++count)
+		n /= base;
+	return (count);
 }
 
-char  *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-    int c;
-    int i;
-    char    *ret;
-    char  dgt[] = "0123456789";
-    
-    i = 0;
-    c = ft_dgtcount(n);
-    ret = malloc(sizeof(char) * (c));
-    if (!ret || ret == 0)
-      return(0);
-    if (n < 0)
-        ret[0] = '-';
-    while (n)
-        {
-           if (n > 0)
-            ret[--c] = dgt[n % 10];
-        else
-            ret[--c] = dgt[n % 10 * -1];
-        n = n / 10;
-        }
+	int			len;
+	char		*ret;
+	const char	*digits = "0123456789";
+
+	len = ft_numlen(n, 10);
+	ret = malloc(sizeof(char) * (len + 1));
+	if (!ret)
+		return (0);
+	ret[len] = 0;
+	if (n == 0)
+		ret[0] = '0';
+	if (n < 0)
+		ret[0] = '-';
+	while (n)
+	{
+		if (n > 0)
+			ret[--len] = digits[n % 10];
+		else
+			ret[--len] = digits[n % 10 * -1];
+		n /= 10;
+	}
+	return (ret);
 }

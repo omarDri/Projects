@@ -10,16 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(char *str)
-{
-    int c;
+#include "libft.h"
 
-    c = 0;
-    while (str[c] != '\0')
-    {
-        if (str[c] < 65 || (str[c] > 90 && str[c] < 97) || str[c] > 122)
-            return(0);
-        c++;
-    }
-    return(1);
+int	ft_isalpha(int c)
+{
+	return ((c >= 'A' && c <= 'Z')
+		|| (c >= 'a' && c <= 'z'));
 }

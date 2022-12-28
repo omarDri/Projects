@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *str1, const void *str2, unsigned int n)
 {
@@ -21,14 +21,13 @@ int	ft_memcmp(const void *str1, const void *str2, unsigned int n)
 	i = 0;
 	haystack = (unsigned char *)str1;
 	needle = (unsigned char *)str2;
-	while (*haystack != '\0' && i < n)
+	while (i < n)
 	{
 		if (*haystack != *needle)
-			return(*haystack - *needle);
+			return (*haystack - *needle);
 		i++;
-		*haystack++;
-		*needle++;
+		haystack++;
+		needle++;
 	}
-	return(0);
+	return (0);
 }
-

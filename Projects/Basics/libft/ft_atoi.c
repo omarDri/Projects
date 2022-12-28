@@ -10,31 +10,32 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int    ft_atoi(char *str)
-{
-    int    ret;
-    int    c;
-    int    i;
+#include "libft.h"
 
-    ret = 0;
-    c = 0;
-    i = 0;
-    while (str[i] != '\0')
-    {
-        while (str[i] < 48 || str[i] > 57)
-        {
-             if (str[i] == '-')
-                c++;
-            i++;
-        }
-        while (str[i] > 47 && str[i] < 58)
-        {
-            ret = ret * 10 + str[i] - 48;
-            i++;
-        }
-        break;
-    }
-    if (c % 2 != 0)
-        ret = -ret;
-    return (ret);
+int	ft_isspace(int c)
+{
+	return ((c >= 9 && c <= 13) || c == 32);
+}
+
+int	ft_atoi(const char *str)
+{
+	int		sign;
+	long	ret;
+
+	ret = 0;
+	sign = 1;
+	while (ft_isspace(*str))
+		++str;
+	if (*str == '+' || *str == '-')
+		if (*(str++) == '-')
+			sign *= -1;
+	while (ft_isdigit(*str))
+	{
+		ret = ret * 10 + sign * (*str++ - '0');
+		if (ret > 2147483647)
+			return (-1);
+		else if (ret < -2147483647 -1)
+			return (0);
+	}
+	return ((int)ret);
 }

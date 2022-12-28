@@ -10,19 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-    size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
-	size_t	ret;
+	size_t	j;
+	size_t	dest_length;
+	size_t	src_length;
 
+	src_length = ft_strlen(src);
+	dest_length = ft_strlen(dst);
+	j = dest_length;
 	i = 0;
-	while (*dst && i < dstsize)
+	if (dest_length < size - 1 && size > 0)
 	{
-		++dst;
-		++i;
+		while (src[i] && dest_length + i < size - 1)
+		{
+			dst[j] = src[i];
+			j++;
+			i++;
+		}
+		dst[j] = 0;
 	}
-	ret = ft_strlcpy(dst, src, dstsize - i);
-	return (ret + i);
+	if (dest_length >= size)
+		dest_length = size;
+	return (dest_length + src_length);
 }

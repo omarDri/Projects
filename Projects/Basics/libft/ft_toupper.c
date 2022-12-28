@@ -10,27 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
+#include "libft.h"
 
-char    *ft_toupper(char *src)
+int	ft_toupper(int c)
 {
-    int    i;
-
-    i = 0;
-    while (src[i] != '\0')
-    {
-        if (src[i] >= 'a' && src[i] <= 'z')
-            src[i] = src[i] - 32;
-        i++;
-    }
-    return (src);
-}
-
-int main(void)
-{
-    char src[] = "HELLOWORLD12";
-
-    ft_toupper(src);
-    printf("%s", src);
-    return(0);
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
+	return (c);
 }
