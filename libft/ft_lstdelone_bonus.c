@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: odouhri <odouhri@student.42wolfsburg.de    +#+  +:+       +#+        */
+/*   By: aortmann <@student.42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/21 06:37:46 by odouhri           #+#    #+#             */
-/*   Updated: 2023/03/17 14:49:52 by odouhri          ###   ########.fr       */
+/*   Created: 2023/08/04 14:37:56 by aortmann          #+#    #+#             */
+/*   Updated: 2023/08/04 14:37:59 by aortmann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

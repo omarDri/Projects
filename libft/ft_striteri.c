@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: odouhri <odouhri@student.42wolfsburg.de    +#+  +:+       +#+        */
+/*   By: aortmann <@student.42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/18 12:21:59 by odouhri           #+#    #+#             */
-/*   Updated: 2022/12/18 12:21:59 by odouhri          ###   ########.fr       */
+/*   Created: 2023/08/04 14:40:22 by aortmann          #+#    #+#             */
+/*   Updated: 2023/08/04 14:40:26 by aortmann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

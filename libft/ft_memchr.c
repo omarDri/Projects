@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: odouhri <odouhri@student.42wolfsburg.de    +#+  +:+       +#+        */
+/*   By: aortmann <@student.42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/14 05:11:12 by odouhri           #+#    #+#             */
-/*   Updated: 2023/03/17 14:51:00 by odouhri          ###   ########.fr       */
+/*   Created: 2023/08/04 14:38:43 by aortmann          #+#    #+#             */
+/*   Updated: 2023/08/04 14:38:49 by aortmann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 void	*ft_memchr(const void *s, int c, unsigned int n)
 {

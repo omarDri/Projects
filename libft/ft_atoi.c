@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: odouhri <odouhri@student.42wolfsburg.de    +#+  +:+       +#+        */
+/*   By: aortmann <@student.42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/14 07:19:49 by odouhri           #+#    #+#             */
-/*   Updated: 2022/12/14 07:19:49 by odouhri          ###   ########.fr       */
+/*   Created: 2023/08/04 14:35:23 by aortmann          #+#    #+#             */
+/*   Updated: 2023/08/04 14:35:58 by aortmann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 static int	convert_num(char c, int num)
 {

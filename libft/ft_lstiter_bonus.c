@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: odouhri <odouhri@student.42wolfsburg.de    +#+  +:+       +#+        */
+/*   By: aortmann <@student.42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/21 08:54:22 by odouhri           #+#    #+#             */
-/*   Updated: 2023/03/17 14:50:03 by odouhri          ###   ########.fr       */
+/*   Created: 2023/08/04 14:38:05 by aortmann          #+#    #+#             */
+/*   Updated: 2023/08/04 14:38:08 by aortmann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

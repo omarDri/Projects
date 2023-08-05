@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: odouhri <odouhri@student.42wolfsburg.de    +#+  +:+       +#+        */
+/*   By: aortmann <@student.42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/14 06:15:48 by odouhri           #+#    #+#             */
-/*   Updated: 2023/03/17 14:54:23 by odouhri          ###   ########.fr       */
+/*   Created: 2023/08/04 14:41:41 by aortmann          #+#    #+#             */
+/*   Updated: 2023/08/04 14:41:43 by aortmann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 int		ft_strlen(const char *s);
 

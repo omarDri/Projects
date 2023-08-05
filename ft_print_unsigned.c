@@ -3,58 +3,106 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_unsigned.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: odouhri <odouhri@student.42wolfsburg.de    +#+  +:+       +#+        */
+/*   By: aortmann <@student.42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/26 03:25:42 by aortmann          #+#    #+#             */
-/*   Updated: 2023/08/03 14:44:56 by odouhri          ###   ########.fr       */
+/*   Updated: 2023/08/04 17:35:59 by aortmann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_unsigned_numlen(unsigned int c)
+static int	unbrlen(unsigned int n)
 {
-  int l;
-  
-  l = 0;
-  if (c == 0)
-    return (1);
-  if (c < 0)//turn negative int into positive
-  {
-    l = l + 1;//add +1 to length for -
-    c = -c;
-  }
-  
-  while (c  > 0)
-  {
-    c /= 10;//divide int by 10
-    l++;//increase length by 1
-  }
-  return (l + 1);//return length +1 for Null
+	int	i;
+
+	i = 0;
+	while (n > 0)
+	{
+		n /= 10;
+		i++;
+	}
+	return (i);
 }
 
-int ft_print_unsigned_nbr(unsigned int c)
+static void	convert_unbr(char *str,unsigned int n, int size, int isovf)
 {
-    int i;
+	int	count;
 
-    i = 0;
-    i = ft_unsigned_numlen(c + 1);//gets numlen +1 for null
-    if (c < 0)//turn negative int into positive
-      {
-        ft_printchar('-');
-        c = -c;
-      }  
-
-    if (c / 10 != 0)
-        ft_print_unsigned_nbr(c / 10);//recall this function with int / 10 
-    ft_printchar('0' + (c % 10));//turns c % 10 to asci and print
-    return(i); //return length of the string
+	count = size;
+	while (n > 0)
+	{
+		str[count - 1] = n % 10 + '0';
+		n /= 10;
+		count--;
+	}
+	if (isovf == 1)
+		str[size - 1]++;
 }
 
-int ft_print_unsigned(unsigned int c)
+static char	*uneg_num(unsigned int i)
 {
-    int len;
-    
-    len = ft_print_unsigned_nbr(c);
-    return (len);
+	char	*str;
+	int		isovf;
+	int		size;
+  int n;
+
+  n = i;
+	isovf = 0;
+	if (n == -2147483648)
+	{
+		n += 1;
+		isovf = 1;
+	}
+	n *= -1;
+	size = unbrlen(n) + 1;
+	str = malloc((size + 1) * sizeof(char));
+	str[size] = '\0';
+	str[0] = '-';
+	convert_unbr(str, n, size, isovf);
+	return (str);
 }
+
+char	*ft_uitoa(unsigned int n)
+{
+	char	*str;
+	int		size;
+
+	if (n > 0)
+	{
+		size = unbrlen(n);
+		str = malloc((size + 1) * sizeof(char));
+		str[size] = '\0';
+		convert_unbr(str, n, size, 0);
+	}
+	else if (n == 0)
+	{
+		str = malloc(2 * sizeof(char));
+		str[0] = 0 + '0';
+		str[1] = '\0';
+	}
+	else
+		str = uneg_num(n);
+	return (str);
+}
+
+int	ft_print_unsigned(unsigned int n)
+{
+	int		print_length;
+	char	*num;
+
+	print_length = 0;
+	if (n == 0)
+		print_length += write(1, "0", 1);
+	else
+	{
+		num = ft_uitoa(n);
+		print_length += ft_printstr(num);
+		free(num);
+	}
+	return (print_length);
+}
+//
+//
+//
+//

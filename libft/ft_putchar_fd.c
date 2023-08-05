@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: odouhri <odouhri@student.42wolfsburg.de    +#+  +:+       +#+        */
+/*   By: aortmann <@student.42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/18 13:02:21 by odouhri           #+#    #+#             */
-/*   Updated: 2023/03/17 14:52:02 by odouhri          ###   ########.fr       */
+/*   Created: 2023/08/04 14:39:19 by aortmann          #+#    #+#             */
+/*   Updated: 2023/08/04 14:39:22 by aortmann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

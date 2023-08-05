@@ -3,38 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: odouhri <odouhri@student.42wolfsburg.de    +#+  +:+       +#+        */
+/*   By: aortmann <@student.42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 01:12:45 by aortmann          #+#    #+#             */
-/*   Updated: 2023/08/03 15:00:42 by odouhri          ###   ########.fr       */
+/*   Updated: 2023/08/04 18:56:17 by aortmann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 
-int ft_formats (va_list args, const char format)
+
+int ft_formats(va_list args, const char format)
 {
     int print_length = 0;
 
     print_length = 0;
-    //check what format the input is and run the functions accordingly 
-    if (format =='c') //print char and return length
-        print_length += ft_printchar(va_arg(args, int));
-    else if (format == 's') //printstr and return length
+    // Check what format the input is and run the functions accordingly
+    if (format == 'c')
+        print_length += ft_putchar(va_arg(args, int));
+    else if (format == 's')
         print_length += ft_putstr(va_arg(args, char *));
-    else if (format == 'p') //print ptr in hex and return length
+	else if (format == 'p') //print ptr in hex and return length
         print_length += ft_print_ptr(va_arg(args, unsigned long long)); 
-    else if (format == 'd' || format == 'i') //printnmbr and return lengt of the string
+    else if (format == 'd' || format == 'i')
         print_length += ft_printnbr(va_arg(args, int));
-    else if (format == 'u') //print unsigned int and return lengt of the string
+    else if (format == 'u')
         print_length += ft_print_unsigned(va_arg(args, unsigned int));
-    else if (format == 'x' || format == 'X')//Print unsigned as hex
-		print_length += ft_print_hex(va_arg(args, unsigned int), format);
-    else if (format == '%') //print percent
-        print_length += ft_printpercent(); 
-    return (print_length); //return the length of the string
+    else if (format == 'x' || format == 'X')
+        print_length += ft_print_hex(va_arg(args, unsigned int), format);
+    else if (format == '%')
+        print_length += ft_printpercent();
+    return (print_length);
 }
+
 
 int	ft_printf(const char *str, ...)
 {
@@ -53,7 +55,7 @@ int	ft_printf(const char *str, ...)
 			i++;
 		}
 		else
-			print_length += ft_printchar(str[i]);
+			print_length += ft_putchar(str[i]);
 		i++;
 	}
 	va_end(args);
