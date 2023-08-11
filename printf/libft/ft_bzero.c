@@ -6,11 +6,9 @@
 /*   By: aortmann <@student.42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/04 14:35:38 by aortmann          #+#    #+#             */
-/*   Updated: 2023/08/04 14:35:39 by aortmann         ###   ########.fr       */
+/*   Updated: 2023/08/10 15:56:48 by aortmann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 void	ft_bzero(void *s, unsigned int n)
 {

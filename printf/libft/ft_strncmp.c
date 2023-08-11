@@ -6,10 +6,9 @@
 /*   By: aortmann <@student.42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/04 14:41:30 by aortmann          #+#    #+#             */
-/*   Updated: 2023/08/04 14:41:33 by aortmann         ###   ########.fr       */
+/*   Updated: 2023/08/10 15:57:25 by aortmann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
 {

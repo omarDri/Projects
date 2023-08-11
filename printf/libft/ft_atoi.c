@@ -6,10 +6,9 @@
 /*   By: aortmann <@student.42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/04 14:35:23 by aortmann          #+#    #+#             */
-/*   Updated: 2023/08/04 14:35:58 by aortmann         ###   ########.fr       */
+/*   Updated: 2023/08/10 15:56:32 by aortmann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 static int	convert_num(char c, int num)
 {
@@ -50,7 +49,7 @@ int	ft_atoi(const char *nptr)
 		i++;
 	}
 	while (nptr[i] != '\0')
-	{		
+	{
 		if (nptr[i] >= 48 && nptr[i] <= 57)
 			num = convert_num(nptr[i], num);
 		else

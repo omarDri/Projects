@@ -6,10 +6,9 @@
 /*   By: aortmann <@student.42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/04 14:40:06 by aortmann          #+#    #+#             */
-/*   Updated: 2023/08/04 14:40:09 by aortmann         ###   ########.fr       */
+/*   Updated: 2023/08/10 15:57:09 by aortmann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 char	*ft_strchr(const char *s, int c)
 {

@@ -6,7 +6,7 @@
 /*   By: aortmann <@student.42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 11:17:09 by aortmann          #+#    #+#             */
-/*   Updated: 2023/08/06 23:35:01 by aortmann         ###   ########.fr       */
+/*   Updated: 2023/08/08 13:22:16 by aortmann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,6 @@ int	ft_ptrl(uintptr_t ptr)
 
 void	ft_put_ptr(uintptr_t ptr)
 {
-	if (ptr == 0)
-	{
-		ft_print_str("Pointer value: (nil)");
-		return;
-	}
 	if (ptr >= 16)
 	{
 		ft_put_ptr(ptr / 16);
@@ -53,8 +48,8 @@ int	ft_print_ptr(unsigned long long ptr)
 	i = 0;
 	if (ptr == 0)
 	{
-		ft_print_str("(nil)");
-		return (5);
+		ft_print_str("0x0");
+		return (3);
 	}
 	i += write(1, "0x0", 2);
 	ft_put_ptr(ptr);

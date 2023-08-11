@@ -6,7 +6,7 @@
 /*   By: aortmann <@student.42wolfsburg.de>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 01:41:02 by aortmann          #+#    #+#             */
-/*   Updated: 2023/08/06 22:52:00 by aortmann         ###   ########.fr       */
+/*   Updated: 2023/08/10 15:55:36 by aortmann         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,7 @@ int	ft_print_str(char *str)
 	i = 0;
 	if (str == NULL)
 	{
-		while (*str)
-		{
-			write(1, str, 1);
-			str++;
-			i++;
-		}
+		ft_print_str("(null)");
 		return (6);
 	}
 	while (str[i])
