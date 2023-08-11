@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: odouhri <odouhri@student.42wolfsburg.de    +#+  +:+       +#+         #
+#    By: aortmann <@student.42wolfsburg.de>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/03 03:20:54 by odouhri           #+#    #+#              #
-#    Updated: 2023/08/02 16:26:37 by odouhri          ###   ########.fr        #
+#    Updated: 2023/08/11 17:51:48 by aortmann         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,6 @@ SRC_LIB = ft_isalpha.c ft_memchr.c ft_putchar_fd.c ft_strchr.c ft_strlcpy.c ft_s
 SRC_LIBFT = $(addprefix libft/, $(SRC_LIB))
 
 SRC = ft_printf.c ft_printptr.c ft_printf_utils.c ft_print_unsigned.c ft_print_hex.c
-
 SRC_ALL = $(SRC) $(SRC_LIBFT)
 
 OPTIONS = -Wall -Wextra -Werror
