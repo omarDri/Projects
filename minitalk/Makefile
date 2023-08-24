@@ -17,16 +17,16 @@ LIBFT_INCLUDE = -I./printf/libft
 FT_PRINTF_INCLUDE = -I./printf
 
 # Libraries
-LIBFT = ./printf/libft/libft.a
-FT_PRINTF = ./printf/libftprintf.a
+LIBFT = printf/libft/libft.a
+FT_PRINTF = printf/libftprintf.a
 
 all: $(SERVER_NAME) $(CLIENT_NAME)
 
-$(SERVER_NAME): $(SERVER_OBJ) $(LIBFT) $(FT_PRINTF)
-	$(CC) $(CFLAGS) $(SERVER_OBJ) -o $(SERVER_NAME) $(LIBFT) $(FT_PRINTF)
+$(SERVER_NAME): $(LIBFT) $(FT_PRINTF)
+	$(CC) $(CFLAGS) -o $(SERVER_NAME) $(SERVER_SRC) $(FT_PRINTF)
 
-$(CLIENT_NAME): $(CLIENT_OBJ) $(LIBFT) $(FT_PRINTF)
-	$(CC) $(CFLAGS) $(CLIENT_OBJ) -o $(CLIENT_NAME) $(LIBFT) $(FT_PRINTF)
+$(CLIENT_NAME): $(LIBFT) $(FT_PRINTF)
+	$(CC) $(CFLAGS) -o $(CLIENT_NAME) $(CLIENT_SRC) $(FT_PRINTF)
 
 $(LIBFT):
 	make -C printf/libft

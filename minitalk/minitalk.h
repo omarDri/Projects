@@ -18,7 +18,7 @@
 #include <signal.h>
 #include <unistd.h>
 #include <string.h>
-#include "/workspaces/Projects/Projects/minitalk/printf/libft/libft.h"
+// #include "/workspaces/Projects/Projects/minitalk/printf/libft/libft.h"
 //#include "libft/libft.h"
 
 void string_to_binary(pid_t server_pid, const char* str);

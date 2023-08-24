@@ -18,7 +18,7 @@ void	sig_handler(int signo)
 	static int	bits = 64;
 	static char	ascii = 0;
 
-	if (signo == SIGUSR1)
+	if (signo == SIGUSR2)
 	{
 		bits /= 2;
 		if (bits == 0)
@@ -27,13 +27,13 @@ void	sig_handler(int signo)
 			ascii = 0;
 			bits = 64;
 		}
-        ft_printf("Received SIGUSR1\n"); // Debug message for SIGUSR1
+        // ft_printf("Received SIGUSR1\n"); // Debug message for SIGUSR1
 	}
-	else if (signo == SIGUSR2)
+	else if (signo == SIGUSR1)
 	{
 		ascii += bits;
-		bits /= 2;
-        ft_printf("Received SIGUSR2\n"); // Debug message for SIGUSR2
+		// bits /= 2;
+        // ft_printf("Received SIGUSR2\n"); // Debug message for SIGUSR2
 	}
     else
     {

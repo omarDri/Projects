@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "../minitalk/printf/ft_printf.h"
+#include "../minitalk/printf/libft/libft.h"
 #include "minitalk.h"
 
 void string_to_binary(pid_t server_pid, const char* str)
@@ -19,17 +20,18 @@ void string_to_binary(pid_t server_pid, const char* str)
     size_t i;
     
     i = 0;
-    j = 7;
+    // j = 7;
     while (str[i] != '\0') 
     {
-        while (j >= 0) 
+        j = 64;
+        while (j > 0) 
         {
-            if (str[i] >> j == 0)
+            if ((str[i] & j) > 0)
                 kill(server_pid, SIGUSR1);
-            else
-                kill(server_pid, SIGUSR2);
-            usleep(10000);
-            j--; // Move to the next bit position
+            usleep(2000);
+            j /= 2; // Move to the next bit position
+            kill(server_pid, SIGUSR2);
+            usleep(2000);
         }
         i++; // Move to the next character in the string
     }
